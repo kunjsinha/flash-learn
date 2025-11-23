@@ -38,7 +38,7 @@ def clean_json_response(response: str) -> str:
     # Remove trailing commas before closing brackets/braces
     cleaned = re.sub(r',(\s*[}\]])', r'\1', cleaned)
     
-    # Fix missing closing bracket - AI often forgets the final ]
+    # Fix missing closing bracket - LLM often forgets the final ] and }
     if cleaned.startswith('[') and not cleaned.rstrip().endswith(']'):
         open_count = cleaned.count('[')
         close_count = cleaned.count(']')
