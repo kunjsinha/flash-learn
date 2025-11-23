@@ -1,6 +1,6 @@
 # AI Flashcard Generator 
 
-Currently only ai.py file exists which is the brain of the app.
+Currently only ai.py and pdf reader capabilities exist.
 
 ## Prerequisites
 
