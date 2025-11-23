@@ -1,6 +1,6 @@
-# AI Question Generator (`ai.py`)
+# AI Flashcard Generator 
 
-This script (`ai.py`) uses a local LLM via Ollama to generate multiple-choice questions (MCQs) from a given text.
+Currently only ai.py file exists which is the brain of the app.
 
 ## Prerequisites
 
