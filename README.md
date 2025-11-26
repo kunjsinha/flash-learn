@@ -69,7 +69,3 @@ Before you begin, ensure you have the following installed:
 -   `ui/main_ui.py`: The main Streamlit user interface and application logic.
 -   `ai.py`: Handles interactions with the local Ollama API for question generation.
 -   `pdf_reader.py`: Utilities for extracting and cleaning text from PDF files.
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to open issues or submit pull requests to improve the project.
