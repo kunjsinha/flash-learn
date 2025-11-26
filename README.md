@@ -1,43 +1,75 @@
-# AI Flashcard Generator 
+# 📚 Flash Learn
 
-Currently only ai.py and pdf reader capabilities exist.
+**Flash Learn** is an AI-powered study assistant that turns your PDF documents into interactive flashcards and quizzes. Built with Streamlit and powered by local LLMs via Ollama, it helps you study more efficiently by automatically generating questions from your reading materials.
 
-## Prerequisites
+## ✨ Features
 
-1.  **Python 3.x**: Ensure you have Python installed.
-2.  **Ollama**: You need to have [Ollama](https://ollama.com/) installed and running on your machine.
-3.  **Model**: The script defaults to using `llama3.2:1b`. You need to pull this model (or the one you intend to use).
-4.  **Python Libraries**: The script requires the `requests` library.
+-   **📄 PDF Text Extraction**: Upload any PDF document to extract its content.
+-   **🤖 AI Question Generation**: Uses a local Ollama model (default: `llama3.2`) to generate high-quality Multiple Choice Questions (MCQs).
+-   **🎴 Flashcard Mode**: Study questions one by one with an interactive "reveal answer" feature.
+-   **📋 List View**: Review all generated questions, answers, and explanations in a structured list.
+-   **🔒 Privacy Focused**: Runs entirely locally on your machine using Ollama—no data leaves your computer.
 
-## Setup
+## 🛠️ Prerequisites
 
-1.  **Install Dependencies**:
+Before you begin, ensure you have the following installed:
+
+1.  **Python 3.8+**: [Download Python](https://www.python.org/downloads/)
+2.  **Ollama**: [Download Ollama](https://ollama.com/)
+3.  **Ollama Model**: You need to pull the Llama 3.2 model (or your preferred model).
+
+## 🚀 Installation
+
+1.  **Clone the Repository**
     ```bash
-    pip install requests
+    git clone https://github.com/kunjsinha/flash-learn.git
+    cd flash-learn
     ```
 
-2.  **Pull the Model**:
-    Make sure Ollama is running, then pull the model specified in the script (default is `llama3.2:1b`):
+2.  **Install Python Dependencies**
     ```bash
-    ollama pull llama3.2:1b
+    pip install streamlit pymupdf requests
     ```
 
-## Usage
+3.  **Setup Ollama**
+    Make sure Ollama is installed and running, then pull the required model:
+    ```bash
+    ollama pull llama3.2
+    ```
+    *Note: You can use other models (like `llama3.2:1b` for faster performance on lower-end hardware) by modifying the `model_name` in `ui/main_ui.py`.*
 
-To test the generator with the built-in sample text, simply run the script directly:
+## 🎮 Usage
 
-```bash
-python ai.py
-```
+1.  **Start the Ollama Server**
+    Ensure Ollama is running in the background:
+    ```bash
+    ollama serve
+    ```
 
-This will:
-1.  Initialize the `LocalQuestionGenerator`.
-2.  Send a sample text about CPUs to the local Ollama instance.
-3.  Print the generated JSON containing the questions.
+2.  **Run the Application**
+    Launch the Streamlit app using the provided wrapper script:
+    ```bash
+    python app.py
+    ```
+    *Alternatively, you can run it directly with Streamlit:*
+    ```bash
+    streamlit run ui/main_ui.py
+    ```
 
-## Customization
+3.  **Generate Flashcards**
+    -   Open the URL provided in the terminal (usually `http://localhost:8501`).
+    -   **Upload** your PDF file.
+    -   Click **"Generate Questions"**.
+    -   Wait for the AI to process the text and create questions.
+    -   Switch between **"View All Questions"** and **"Start Flashcards"** modes to study!
 
-You can modify the `if __name__ == "__main__":` block in `ai.py` to:
--   Change the `model_name` passed to `LocalQuestionGenerator`.
--   Update `sample_text` with your own content.
--   Adjust parameters like `count` (number of questions), `difficulty`, or `q_type` in the `generate_questions` call.
+## 📂 Project Structure
+
+-   `app.py`: Entry point script to launch the application.
+-   `ui/main_ui.py`: The main Streamlit user interface and application logic.
+-   `ai.py`: Handles interactions with the local Ollama API for question generation.
+-   `pdf_reader.py`: Utilities for extracting and cleaning text from PDF files.
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the project.
