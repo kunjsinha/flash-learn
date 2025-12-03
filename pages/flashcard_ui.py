@@ -12,10 +12,14 @@ from pdf_reader import extract_text_from_pdf, clean_json_response
 from ai import LocalQuestionGenerator
 
 # Page config
-st.set_page_config(page_title="Flash Learn", page_icon="📚", layout="wide")
+st.set_page_config(page_title="Flash Learn - Flashcards", page_icon="📚", layout="wide")
+
+# Back to Dashboard button
+if st.button("⬅️ Back to Dashboard"):
+    st.switch_page("dashboard.py")
 
 # Title
-st.title("📚 Flash Learn")
+st.title("📚 Flash Learn - Flashcard Generator")
 st.markdown("---")
 
 # Initialize session state

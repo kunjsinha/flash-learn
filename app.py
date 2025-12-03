@@ -6,7 +6,7 @@ def run_streamlit():
         sys.executable,
         "-m", "streamlit",
         "run",
-        "ui/main_ui.py"
+        "dashboard.py"
     ])
 
 if __name__ == "__main__":
