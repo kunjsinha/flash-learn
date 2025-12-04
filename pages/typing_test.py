@@ -163,7 +163,7 @@ html_code = f"""
     
     <div id="text-display" tabindex="0"></div>
     
-    <div class="instructions">Click above and start typing!</div>
+    <div class="instructions">Start typing!</div>
     
     <div id="results">
         <h2>Test Complete! 🎉</h2>

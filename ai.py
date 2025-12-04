@@ -25,6 +25,7 @@ class LocalQuestionGenerator:
         - Use this format exactly:
         IMPORTANT: 
         - DO NOT use LaTeX.
+        - Do not mess up te JSON string format and remember to close "".
         - ANY MATH MARKUP IS NOT ALLOWED.
         - DO NOT use math symbols.
         - DO NOT use unicode symbols.
@@ -44,6 +45,7 @@ class LocalQuestionGenerator:
         Only use this format do not forget any part of the json format.
         
         ONLY output the JSON. No notes, no commentary.
+        AGAIN, DO NOT use LaTeX or any symbol markup.
         """
 
         payload = {
