@@ -14,6 +14,14 @@ from ai import LocalQuestionGenerator
 # Page config
 st.set_page_config(page_title="Flash Learn - Flashcards", page_icon="📚", layout="wide")
 
+# Initialize authentication state
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+# Redirect to login if not authenticated
+if not st.session_state.authenticated:
+    st.switch_page("loginui.py")
+
 # Back to Dashboard button
 if st.button("⬅️ Back to Dashboard"):
     st.switch_page("dashboard.py")

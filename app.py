@@ -6,7 +6,7 @@ def run_streamlit():
         sys.executable,
         "-m", "streamlit",
         "run",
-        "dashboard.py"
+        "loginui.py"
     ])
 
 if __name__ == "__main__":
