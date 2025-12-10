@@ -87,7 +87,6 @@ if st.session_state.show_login:
                 st.info("click on sign-up to create a new account")
 
 #executes if signup button is clicked
-spcl_char=["-","_","@"]  #list to store the special characters that are allowed in username
 if st.session_state.show_signup:
     with st.form(key="create your account"):
         st.subheader("sign-up:",width="content",divider="yellow")
