@@ -24,7 +24,7 @@ if not st.session_state.authenticated:
 
 # Back to Dashboard button
 if st.button("⬅️ Back to Dashboard"):
-    st.switch_page("dashboard.py")
+    st.switch_page("pages/dashboard.py")
 
 # Title
 st.title("📚 Flash Learn - Flashcard Generator")

@@ -14,7 +14,7 @@ if "username" not in st.session_state:
 
 # Redirect to dashboard if already authenticated
 if st.session_state.authenticated:
-    st.switch_page("dashboard.py")
+    st.switch_page("pages/dashboard.py")
 
 
 
@@ -80,7 +80,7 @@ if st.session_state.show_login:
                     st.session_state.authenticated = True
                     st.session_state.username = username
                     # Redirect to dashboard
-                    st.switch_page("dashboard.py")
+                    st.switch_page("pages/dashboard.py")
                     break
             else:
                 st.warning("invalid username or password")
@@ -136,7 +136,7 @@ if st.session_state.show_signup:
                 st.session_state.authenticated = True
                 st.session_state.username = new_username
                 # Redirect to dashboard
-                st.switch_page("dashboard.py")
+                st.switch_page("pages/dashboard.py")
 
                 
 
