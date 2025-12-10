@@ -2,6 +2,7 @@ import streamlit as st
 import sys
 import os
 import json
+import tempfile
 
 
 
@@ -51,7 +52,8 @@ if uploaded_file is not None:
         with st.spinner("Initializing AI and generating questions... Please wait."):
             try:
                 # Save uploaded file temporarily
-                temp_path = f"/tmp/{uploaded_file.name}"
+                temp_dir = tempfile.gettempdir()
+                temp_path = os.path.join(temp_dir, uploaded_file.name)
                 with open(temp_path, "wb") as f:
                     f.write(uploaded_file.getbuffer())
                 
