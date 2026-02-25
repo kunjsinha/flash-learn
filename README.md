@@ -1,6 +1,7 @@
 # 📚 Flash Learn
 
 A study tool with user authentication, AI-powered flashcards, and a typing speed test.
+This was done for a university mini project.
 
 ## Features
 
